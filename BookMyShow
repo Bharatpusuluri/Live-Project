@@ -1,0 +1,31 @@
+package oops;
+
+public class BookMyShow {
+	static int available=15;
+	int required;
+	
+	void bookTicket(int required)//local
+	{
+		this.required=required;// initializing instance var = local var
+	
+		if(this.available>=this.required)
+		{
+			this.available=this.available-this.required;
+			System.out.println("Congratulations "+this.required+" booked successfully");
+		}
+		else
+			System.out.println(this.required+ " Tickets are not available");
+		System.out.println("Available Tickets now:"+this.required);
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		BookMyShow user1=new BookMyShow();
+		user1.bookTicket(3);
+		
+		BookMyShow user2=new BookMyShow();
+		user2.bookTicket(7);
+		
+
+	}
+
+}
